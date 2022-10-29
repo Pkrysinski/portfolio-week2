@@ -26,12 +26,28 @@ header {
 }
 
 header h1 {
-    /* display: block; */
     font-size: 40px;
 }
 
 h2{
   font-size: 20px;
+}
+
+h3{
+  font-size: 15px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+.section{
+  padding:40px;
+}
+
+.section h3{
+  padding-top: 5px;
 }
 
 nav {
