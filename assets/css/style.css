@@ -5,6 +5,12 @@ main {
     margin-top: 2%;
   }
 
+body{
+  background-color: lightgrey;
+  color: darkgreen;
+  font-family:monospace;
+}
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -15,9 +21,6 @@ header {
     flex-direction: row;
     flex-wrap:wrap;
     padding: 20px;
-    font-family:monospace;
-    background-color: lightgrey;
-    color: darkgreen;
     justify-content: space-between;
     align-items: center;
 }
@@ -25,6 +28,10 @@ header {
 header h1 {
     /* display: block; */
     font-size: 40px;
+}
+
+h2{
+  font-size: 20px;
 }
 
 nav {
@@ -35,6 +42,7 @@ nav {
 nav a{
     padding-left: 30px;
 }
+
 
 .winter {
     height: 400px;
@@ -63,6 +71,7 @@ nav a{
   }
   
   /* Cards are stacked on top of each other at 768px or smaller */
+  /* Had to set this to 825, otherwise some funky behavior happens in the header */
   @media screen and (max-width: 825px) {
 
     nav,
@@ -73,6 +82,10 @@ nav a{
 
     h1 {
         padding-bottom: 20px;
+    }
+
+    nav {
+      padding-top: 20px;
     }
 
     nav a {
