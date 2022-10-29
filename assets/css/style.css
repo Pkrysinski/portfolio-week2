@@ -37,14 +37,43 @@ h3{
   font-size: 15px;
 }
 
+/* .content{
+  display: flex;
+  flex-direction: column;
+} */
+
 .content{
+  display: flex;
+  flex-direction: column;
+  padding:40px;
+}
+
+.content .section-column{
+  padding-bottom:40px;
   display: flex;
   flex-direction: column;
 }
 
-.section{
-  padding:40px;
+.content .section-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.content .section-row img{
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+}
+
+/* .content .section img{
+  padding:40px;
+  display: flex;
+  flex-direction: row;
+  max-width: 400px;
+} */
 
 .section h3{
   padding-top: 5px;
@@ -108,4 +137,13 @@ nav a{
         padding-top: 0px;
         padding-left: 0px;
     }
+
+    .content{
+      flex-direction: column;
+    }
+    
+    .content .section-row{
+      flex-direction: column;
+    }
+
   }
