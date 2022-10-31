@@ -35,7 +35,7 @@ THEN that application's image should be larger in size than the others
 - - - - -
 .DONE-4 {
         >"My First App" is the first app worked on in the actual class, which is why I chose that
-        one to be the first app ahead of the pre-work study guide.
+        one to be the first (larger image) app ahead of the pre-work study guide.
         >Note: I'm not sure this is best practice for making this image larger than the others...but
         it works, so I decided to focus efforts elsewhere and move on.
     }
@@ -46,10 +46,10 @@ WHEN I click on the images of the applications
 THEN I am taken to that deployed application
 - - - - -
 .DONE-5 {
-
+        >Made it so that the buttons are now clickable links to other websites for which the button is intended.
     }
 .TODO-5 {
-        >Make the imges buttons, link to the actual deployed website.
+
     }
 
 
@@ -64,6 +64,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 .TODO-GENERAL {
         >Maybe make each of the About Me, My Work, and Contact Info sections have their own boxs.
+            -DONE
         >Create a footer and add a button "Back to Top" or something.
-        >Add info in the "Contact Info section"
+        >Add info in the "Contact Info" section
     }

@@ -48,15 +48,17 @@ h3{
 }
 
 .content .section-column{
-  padding-bottom:40px;
+  margin: 20px;
+  padding:20px;
   display: flex;
   flex-direction: column;
+  border: 15px solid green;
 }
 
 .content .section-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -70,8 +72,14 @@ h3{
 
 .content .section-row img:hover {
   border-radius: 3px;
-  box-shadow: 5px 10px 8px darkgrey;
+  box-shadow: 5px 10px 8px rgb(128, 128, 128);
   transition: all 200ms ease-out;
+  cursor:pointer;
+}
+
+nav a:hover {
+  text-shadow: 5px 10px 8px black;
+  transition: all 200ms ease-out;  
 }
 
 .section h3{
@@ -95,17 +103,15 @@ nav a {
     background-position: center;
 }
 
-/* START OF TEST CODE */
 .img-with-text {
   text-align:center;
   width:auto;
 }
 
 .img-with-text img {
-  display: block;
+  display: darkgrey;
   margin: 0 auto;
 }
-/* END OF TEST CODE */
 
 #headshot {
     width: 50px;
