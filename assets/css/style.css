@@ -16,6 +16,10 @@ a {
     text-decoration: inherit;
 }
 
+p {
+  padding-bottom: 10px;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -37,11 +41,6 @@ h3{
   font-size: 15px;
 }
 
-/* .content{
-  display: flex;
-  flex-direction: column;
-} */
-
 .content{
   display: flex;
   flex-direction: column;
@@ -62,18 +61,18 @@ h3{
 }
 
 .content .section-row img{
-  padding:20px;
+  margin-top:20px;
+  margin-bottom:10px;
   display: flex;
   flex-direction: row;
-  max-width: 300px;
+  max-width: 350px;
 }
 
-/* .content .section img{
-  padding:40px;
-  display: flex;
-  flex-direction: row;
-  max-width: 400px;
-} */
+.content .section-row img:hover {
+  border-radius: 3px;
+  box-shadow: 5px 10px 8px darkgrey;
+  transition: all 200ms ease-out;
+}
 
 .section h3{
   padding-top: 5px;
@@ -84,10 +83,9 @@ nav {
     font-size: 20px;
 }
 
-nav a{
+nav a {
     padding-left: 30px;
 }
-
 
 .winter {
     height: 400px;
@@ -97,27 +95,30 @@ nav a{
     background-position: center;
 }
 
+/* START OF TEST CODE */
+.img-with-text {
+  text-align:center;
+  width:auto;
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+}
+/* END OF TEST CODE */
+
 #headshot {
     width: 50px;
     height: auto;
     border-radius: 20px;
 }
 
-/* Cards are split into two columns at 992px or smaller */
-@media screen and (max-width: 992px) {
-
-    /* .card {
-      width: 50%;
-    } */
-    /* Change the header color */
-    /* header {
-      background: #772014;
-    } */
-  }
+#module-1-challenge{
+  max-width: 550px;
+}
   
-  /* Cards are stacked on top of each other at 768px or smaller */
-  /* Had to set this to 825, otherwise some funky behavior happens in the header */
-  @media screen and (max-width: 825px) {
+/* Header and nav elements are stacked on top of each other at 825px or smaller */
+@media screen and (max-width: 825px) {
 
     nav,
     header {
@@ -143,6 +144,15 @@ nav a{
     }
     
     .content .section-row{
+      flex-direction: column;
+    }
+
+  }
+
+/* "My Work" elements are stacked on top of each other at px or smaller */
+  @media screen and (max-width: 1345px) {
+
+    #my-work-row{
       flex-direction: column;
     }
 
