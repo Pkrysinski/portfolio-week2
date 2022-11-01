@@ -44,7 +44,7 @@ WHEN I click on the images of the applications
 THEN I am taken to that deployed application
 
 <p>.DONE-5...</p>
-        >Made it so that the buttons are now clickable links to other websites for which the button is intended.
+        >Made it so that the images are now clickable links to other websites for which the image from the website is intended.
 
 - - - - -
 WHEN I resize the page or view the site on various screens and devices
@@ -56,7 +56,12 @@ THEN I am presented with a responsive layout that adapts to my viewport
 - - - - -
 .TODO-GENERAL...
         >Maybe make each of the About Me, My Work, and Contact Info sections have their own boxs.
-            -DONE
+                -DONE
         >Create a footer and add a button "Back to Top" or something.
+                -DONE
         >Add info in the "Contact Info" section
+                -DONE
         >Try to get profile picture next to h1.
+                -DONE
+        >Comment out CSS more
+                -DONE

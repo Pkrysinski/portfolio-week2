@@ -1,6 +1,8 @@
+/* CSS file is organized sequentially to mimic the HTML progression from 
+    top-down orientation */
+
 main {
     display: flex;
-    /* Forces elements to the next line if they don't fit */
     flex-wrap: wrap;
     margin-top: 2%;
   }
@@ -9,8 +11,12 @@ body{
   background-color: lightgrey;
   color: darkgreen;
   font-family:monospace;
+  /* min-width value is the smallest I could go without images leaking outside
+      of the border */
+  min-width: 600px; 
 }
 
+/* Have all <a> tags inherit the color and text-decoration of the <body> */
 a {
     color: inherit;
     text-decoration: inherit;
@@ -29,8 +35,10 @@ header {
     align-items: center;
 }
 
+/* Added a little padding to space out the image of my face with the H1 */
 header h1 {
     font-size: 40px;
+    padding-right: 20px;
 }
 
 h2{
@@ -41,49 +49,17 @@ h3{
   font-size: 15px;
 }
 
-.content{
-  display: flex;
-  flex-direction: column;
-  padding:40px;
-}
-
-.content .section-column{
-  margin: 20px;
-  padding:20px;
-  display: flex;
-  flex-direction: column;
-  border: 15px solid green;
-}
-
-.content .section-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+/* Flexbox model used for "Peter Krysinski" and headshot photo to make sure
+    they stay together when responsive design is enacted */
+.header-name-photo{
+  display:flex;
   align-items: center;
-}
-
-.content .section-row img{
-  margin-top:20px;
-  margin-bottom:10px;
-  display: flex;
-  flex-direction: row;
-  max-width: 350px;
-}
-
-.content .section-row img:hover {
-  border-radius: 3px;
-  box-shadow: 5px 10px 8px rgb(128, 128, 128);
-  transition: all 200ms ease-out;
-  cursor:pointer;
+  justify-content: center;
 }
 
 nav a:hover {
   text-shadow: 5px 10px 8px black;
   transition: all 200ms ease-out;  
-}
-
-.section h3{
-  padding-top: 5px;
 }
 
 nav {
@@ -95,12 +71,69 @@ nav a {
     padding-left: 30px;
 }
 
+/* This is the center winter photo in the middle of the page */
 .winter {
-    height: 400px;
-    width: 100%;
-    background-image: url("../images/winter-trees.jpg");
-    background-size: cover;
-    background-position: center;
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/winter-trees.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding:40px;
+}
+
+/* I decided to give each of the types of flexbox orientations I was going to use
+    multiple times throughout the project their own class for "column" and "row" */
+.content .section-column{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding:20px;
+  border: 15px solid green;
+}
+
+.content .section-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* This is to have the three "my work" pictures grouped into a flexbox
+    of their own for responsive design theory */
+.content .section-row img{
+  margin-top:20px;
+  margin-bottom:10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+}
+
+/* This is to create a shadow effect over the imgages when hovered over */
+.content .section-row img:hover {
+  border-radius: 3px;
+  box-shadow: 5px 10px 8px rgb(128, 128, 128);
+  transition: all 200ms ease-out;
+  cursor:pointer;
+}
+
+/* This is to create a lifting effect on the image when hovered over which,
+    when paired with the shadow effect, hopes to create a sense of 3D */
+.zoom:hover {
+  transform: scale(105%); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transition: 0.5s;
+}
+
+.section h3{
+  padding-top: 5px;
+}
+
+footer h3 {
+  padding-bottom: 12px;
 }
 
 .img-with-text {
@@ -113,18 +146,37 @@ nav a {
   margin: 0 auto;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: darkgrey;
+}
+
+footer a:hover {
+  text-shadow: 5px 10px 8px black;
+  transition: all 200ms ease-out;  
+}
+
+footer p {
+  padding:10px;
+}
+
+/* border-radius gives the curved corners look */
 #headshot {
-    width: 50px;
+    width: 65px;
     height: auto;
     border-radius: 20px;
 }
 
+/* custom-setting the size of the larger "my work" image so that it will always be a little larger */
 #module-1-challenge{
-  max-width: 550px;
+  max-width: 450px;
+
 }
   
-/* Header and nav elements are stacked on top of each other at 825px or smaller */
-@media screen and (max-width: 825px) {
+/* Header and nav elements are stacked on top of each other when available space between them is <=0px */
+@media screen and (max-width: 858px) {
 
     nav,
     header {
@@ -153,10 +205,14 @@ nav a {
       flex-direction: column;
     }
 
+    #header-row{
+      flex-direction: column;
+    }
+
   }
 
-/* "My Work" elements are stacked on top of each other at px or smaller */
-  @media screen and (max-width: 1345px) {
+/* "My Work" elements are stacked on top of each other when available space between them is <=0px */
+  @media screen and (max-width: 1260px) {
 
     #my-work-row{
       flex-direction: column;
